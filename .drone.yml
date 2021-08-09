@@ -1,0 +1,10 @@
+kind: pipeline
+type: docker
+name: develop
+
+steps:
+- name: unit-test
+  image: "golang:1.16"
+  commands:
+    - go test ./...
+
