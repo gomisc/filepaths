@@ -1,6 +1,6 @@
 module git.corout.in/golibs/filepaths
 
-go 1.16
+go 1.18
 
 require (
 	git.corout.in/golibs/errors v1.0.5
