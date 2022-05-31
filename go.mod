@@ -2,8 +2,6 @@ module git.corout.in/golibs/filepaths
 
 go 1.18
 
-require (
-	git.corout.in/golibs/errors v1.0.5
-	git.corout.in/golibs/fields v1.0.1
-	git.corout.in/golibs/slog v1.0.2
-)
+require git.corout.in/golibs/errors v1.1.1
+
+require git.corout.in/golibs/fields v1.0.2 // indirect

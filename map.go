@@ -13,41 +13,42 @@ import (
 func MakeFilesMap(base string, withRelPath bool, filters ...FilesFilter) (map[string]os.FileInfo, error) {
 	fm := make(map[string]os.FileInfo)
 
-	err := filepath.Walk(base, func(path string, info fs.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-
-		for _, filter := range filters {
-			var ok bool
-
-			ok, err = filter.Exclude(path, base, info)
+	err := filepath.Walk(
+		base, func(path string, info fs.FileInfo, err error) error {
 			if err != nil {
-				if !errors.Is(err, filepath.SkipDir) {
-					return errors.Wrapf(err, "apply filter %s", filter.Name())
-				}
-
 				return err
 			}
 
-			if ok {
-				return nil
+			for _, filter := range filters {
+				var ok bool
+
+				ok, err = filter.Exclude(path, base, info)
+				if err != nil {
+					if !errors.Is(err, filepath.SkipDir) {
+						return errors.Wrapf(err, "apply filter %s", filter.Name())
+					}
+
+					return err
+				}
+
+				if ok {
+					return nil
+				}
 			}
-		}
 
-		fileKey := path
-		if withRelPath {
-			fileKey, err = filepath.Rel(base, path)
-			if err != nil {
-				return errors.Wrapf(err, "get relative path of %s", path)
+			fileKey := path
+			if withRelPath {
+				fileKey, err = filepath.Rel(base, path)
+				if err != nil {
+					return errors.Wrapf(err, "get relative path of %s", path)
+				}
 			}
-		}
 
-		fm[fileKey] = info
+			fm[fileKey] = info
 
-		return nil
-	})
-
+			return nil
+		},
+	)
 	if err != nil {
 		return nil, errors.Wrap(err, "walk directory")
 	}

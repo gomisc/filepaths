@@ -72,7 +72,7 @@ func MatchFilterFomFile(path string) (FilesFilter, error) {
 		return nil, errIgnoreNotExist
 	}
 
-	fd, err := OpenSec(path)
+	fd, err := os.Open(filepath.Clean(path))
 	if err != nil {
 		return nil, errors.Wrap(err, "open .gitignore file")
 	}
@@ -107,10 +107,12 @@ func MatchFilterFomFile(path string) (FilesFilter, error) {
 	return MatchFilterFromLines(lines...)
 }
 
+// Name
 func (f *matchFilter) Name() string {
 	return "match-filter"
 }
 
+// Exclude
 func (f *matchFilter) Exclude(abs, base string, fi os.FileInfo) (bool, error) {
 	rel, err := filepath.Rel(base, abs)
 	if err != nil {

@@ -1,4 +1,3 @@
-// Package filepaths - функционал для работы с файлами
 package filepaths
 
 import (
@@ -6,7 +5,11 @@ import (
 	"path"
 )
 
-const homeDirVariable = "HOME"
+const (
+	homeDirVariable = "HOME"
+	configDirName   = ".config"
+	cacheDirName    = ".cache"
+)
 
 // FileExists - проверяет существует ли файл/директория
 func FileExists(filename string) bool {
@@ -17,14 +20,10 @@ func FileExists(filename string) bool {
 	return true
 }
 
-// HomePath - возвращает путь к домашней директории
-func HomePath(args ...string) string {
-	return path.Join(append([]string{os.Getenv(homeDirVariable)}, args...)...)
-}
-
 // GoPath - возвращает GOPATH
 func GoPath(args ...string) string {
-	var p = os.Getenv("GOPATH")
+	p := os.Getenv("GOPATH")
+
 	if p == "" {
 		p = HomePath("go")
 	}
@@ -32,4 +31,19 @@ func GoPath(args ...string) string {
 	parts := append([]string{p}, args...)
 
 	return path.Join(parts...)
+}
+
+// HomePath - возвращает путь к домашней директории пользователя
+func HomePath(args ...string) string {
+	return path.Join(append([]string{os.Getenv(homeDirVariable)}, args...)...)
+}
+
+// ConfigPath - возвращает путь к директории конфигов пользователя
+func ConfigPath(args ...string) string {
+	return HomePath(append([]string{configDirName}, args...)...)
+}
+
+// CachePath - возвращает путь к директории кэша пользователя
+func CachePath(args ...string) string {
+	return HomePath(append([]string{cacheDirName}, args...)...)
 }
