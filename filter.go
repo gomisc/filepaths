@@ -107,12 +107,12 @@ func MatchFilterFomFile(path string) (FilesFilter, error) {
 	return MatchFilterFromLines(lines...)
 }
 
-// Name
+// Name -
 func (f *matchFilter) Name() string {
 	return "match-filter"
 }
 
-// Exclude
+// Exclude -
 func (f *matchFilter) Exclude(abs, base string, fi os.FileInfo) (bool, error) {
 	rel, err := filepath.Rel(base, abs)
 	if err != nil {

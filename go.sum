@@ -1,7 +1,11 @@
 git.corout.in/golibs/errors v1.1.15 h1:UAN/QTv7VXL1PSBE10mIHQ/JNI+feOa/Smhjce993rg=
 git.corout.in/golibs/errors v1.1.15/go.mod h1:ulQCEgY29p7Cna+EMHy5w0e4jun1zvDPvpPtg1YlkC4=
+git.corout.in/golibs/errors v1.1.16 h1:mMnPbWqSs5XbYFEvFQLXMmkNmEJuFuTPse4dcDu+IHI=
+git.corout.in/golibs/errors v1.1.16/go.mod h1:zx662OJWUIQ+4Y2bGB1phSSSLA39O3gFX6xnHzsf6Js=
 git.corout.in/golibs/fields v1.0.5 h1:1iGKvGJYKIqc9LRKcHWK6XBXIi9BqaiVYYq0LvnzN2M=
 git.corout.in/golibs/fields v1.0.5/go.mod h1:gy2+5oDd8uDT19DNmtfWmLz0sbuDZyzspPez4vyhnX4=
+git.corout.in/golibs/fields v1.0.6 h1:qobLeHsVzxhsUH+cBc8JEtz/B9M691HSLy0J9pUJXHA=
+git.corout.in/golibs/fields v1.0.6/go.mod h1:SfKMdRc3L2vprkZQ7/eTK5tuKrQ+w7O2Fh6r3ZQjmP8=
 git.corout.in/golibs/slog v1.0.6 h1:TErWst4Aiw04c1EFNUmzMnpWASJxfDbH1uEXAoVWH7k=
 github.com/mattn/go-colorable v0.1.8 h1:c1ghPdyEDarC70ftn0y+A/Ee++9zz8ljHG1b13eJ0s8=
 github.com/mattn/go-isatty v0.0.14 h1:yVuAays6BHfxijgZPzw+3Zlu5yQgKGP2/hcQbHb7S9Y=

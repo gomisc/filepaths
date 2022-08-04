@@ -11,7 +11,7 @@ const (
 	cacheDirName    = ".cache"
 )
 
-// FileExists - проверяет существует ли файл/директория
+// FileExists - проверяет существовать ли файл/директория
 func FileExists(filename string) bool {
 	if _, err := os.Stat(filename); os.IsNotExist(err) {
 		return false
