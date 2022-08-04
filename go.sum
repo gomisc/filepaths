@@ -2,6 +2,8 @@ git.corout.in/golibs/errors v1.1.15 h1:UAN/QTv7VXL1PSBE10mIHQ/JNI+feOa/Smhjce993
 git.corout.in/golibs/errors v1.1.15/go.mod h1:ulQCEgY29p7Cna+EMHy5w0e4jun1zvDPvpPtg1YlkC4=
 git.corout.in/golibs/errors v1.1.16 h1:mMnPbWqSs5XbYFEvFQLXMmkNmEJuFuTPse4dcDu+IHI=
 git.corout.in/golibs/errors v1.1.16/go.mod h1:zx662OJWUIQ+4Y2bGB1phSSSLA39O3gFX6xnHzsf6Js=
+git.corout.in/golibs/errors v1.1.17 h1:CZmK+CAjeR4ch+YHtSLGiGmON3GYgUrN13uhj3X0aUA=
+git.corout.in/golibs/errors v1.1.17/go.mod h1:1G1lyVB1l2bf9X2CvQf//WfOIcQ/KwcE2Bd8VXOGaNY=
 git.corout.in/golibs/fields v1.0.5 h1:1iGKvGJYKIqc9LRKcHWK6XBXIi9BqaiVYYq0LvnzN2M=
 git.corout.in/golibs/fields v1.0.5/go.mod h1:gy2+5oDd8uDT19DNmtfWmLz0sbuDZyzspPez4vyhnX4=
 git.corout.in/golibs/fields v1.0.6 h1:qobLeHsVzxhsUH+cBc8JEtz/B9M691HSLy0J9pUJXHA=
