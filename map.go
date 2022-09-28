@@ -19,6 +19,10 @@ func MakeFilesMap(base string, withRelPath bool, filters ...FilesFilter) (map[st
 				return err
 			}
 
+			if path == base {
+				return nil
+			}
+
 			for _, filter := range filters {
 				var ok bool
 
@@ -28,7 +32,7 @@ func MakeFilesMap(base string, withRelPath bool, filters ...FilesFilter) (map[st
 						return errors.Wrapf(err, "apply filter %s", filter.Name())
 					}
 
-					return err
+					return nil
 				}
 
 				if ok {
