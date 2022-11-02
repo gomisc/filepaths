@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"git.corout.in/golibs/errors"
+	"git.eth4.dev/golibs/errors"
 )
 
 // MakeFilesMap - создает карту директории, с возможностью
