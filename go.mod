@@ -1,4 +1,4 @@
-module git.eth4.dev/golibs/filepaths
+module gopkg.in/gomisc/filepaths.v1
 
 go 1.19
 
