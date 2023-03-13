@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"git.eth4.dev/golibs/errors"
+	"gopkg.in/gomisc/errors.v1"
 )
 
 // MakeFilesMap - создает карту директории, с возможностью

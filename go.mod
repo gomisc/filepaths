@@ -1,7 +1,7 @@
 module git.eth4.dev/golibs/filepaths
 
-go 1.18
+go 1.19
 
-require git.eth4.dev/golibs/errors v1.2.1
+require gopkg.in/gomisc/errors.v1 v1.3.2
 
-require git.eth4.dev/golibs/fields v1.1.0 // indirect
+require gopkg.in/gomisc/fields.v1 v1.1.2 // indirect
